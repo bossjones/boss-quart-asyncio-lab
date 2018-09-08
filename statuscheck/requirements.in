@@ -35,3 +35,10 @@ click-plugins
 pygraphviz
 aiohttp-jinja2
 trafaret-config
+
+# Thread-safe asyncio-aware queue for Python
+# SOURCE: https://github.com/aio-libs/janus
+janus
+
+# SOURCE: https://github.com/aio-libs/aiohttp_admin
+# aiohttp_admin

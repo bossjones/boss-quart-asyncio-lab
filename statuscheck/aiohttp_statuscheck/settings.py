@@ -18,7 +18,7 @@ def get_config(argv=None):
     )
 
     # ignore unknown options
-    options, unknown = ap.parse_known_args(argv)
+    options, _ = ap.parse_known_args(argv)
 
     config = commandline.config_from_options(options, TRAFARET)
     return config

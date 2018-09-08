@@ -3,7 +3,7 @@
 SHELL=/bin/bash
 
 define ASCILOGO
-boss-quart-asyncio-lab
+statuscheck
 =======================================
 endef
 
@@ -37,7 +37,7 @@ current_dir        := $(notdir $(patsubst %/,%,$(dir $(mkfile_path))))
 
 PR_SHA             := $(shell git rev-parse HEAD)
 REPO_ORG           := bossjones
-REPO_NAME          := boss-quart-asyncio-lab
+REPO_NAME          := statuscheck
 REPO_SLUG          := $(REPO_ORG)/$(REPO_NAME)
 IMAGE_TAG          := $(REPO_SLUG):$(PR_SHA)
 TEST_IMAGE_NAME    := $(IMAGE_TAG)
@@ -58,9 +58,6 @@ list:
 .PHONY: yamllint-role
 yamllint-role:
 	bash -c "find .* -type f -name '*.y*ml' -print0 | xargs -I FILE -t -0 -n1 yamllint FILE"
-
-download-roles:
-	ansible-galaxy install -r requirements.yml --roles-path ./roles/
 
 # Compile python modules against homebrew openssl. The homebrew version provides a modern alternative to the one that comes packaged with OS X by default.
 # OS X's older openssl version will fail against certain python modules, namely "cryptography"
@@ -91,3 +88,9 @@ run-black:
 # SOURCE: https://pgjones.gitlab.io/quart/deployment.html
 run-prod:
 	hypercorn app:app
+
+docker_run:
+	scripts/docker-run.sh
+
+run-app:
+	python -m aiohttp_statuscheck

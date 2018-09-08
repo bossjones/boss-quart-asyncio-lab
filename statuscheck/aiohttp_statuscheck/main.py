@@ -6,8 +6,8 @@ import jinja2
 from aiohttp import web
 
 # from aiohttp_statuscheck.db import close_pg, init_pg
-# from aiohttp_statuscheck.middlewares import setup_middlewares
-# from aiohttp_statuscheck.routes import setup_routes
+from aiohttp_statuscheck.middlewares import setup_middlewares
+from aiohttp_statuscheck.routes import setup_routes
 from aiohttp_statuscheck.settings import get_config
 
 
@@ -15,7 +15,7 @@ async def init_app(argv=None):
 
     app = web.Application()
 
-    # app['config'] = get_config(argv)
+    app['config'] = get_config(argv)
 
     # # setup Jinja2 template renderer
     # aiohttp_jinja2.setup(
@@ -25,10 +25,10 @@ async def init_app(argv=None):
     # app.on_startup.append(init_pg)
     # app.on_cleanup.append(close_pg)
 
-    # # setup views and routes
-    # setup_routes(app)
+    # setup views and routes
+    setup_routes(app)
 
-    # setup_middlewares(app)
+    setup_middlewares(app)
 
     return app
 
