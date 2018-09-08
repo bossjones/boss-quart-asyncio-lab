@@ -23,7 +23,6 @@ appdirs==1.4.3            # via black
 asn1crypto==0.24.0        # via cryptography
 astroid==2.0.4            # via pylint
 async-timeout==3.0.0
-asyncio==3.4.3
 attrs==18.2.0             # via aiohttp, black
 autopep8==1.4
 black==18.6b4
