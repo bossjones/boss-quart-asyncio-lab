@@ -131,3 +131,7 @@ run-black-check:
 .PHONY: run-black
 run-black:
 	black --verbose .
+
+# SOURCE: https://pgjones.gitlab.io/quart/deployment.html
+run-prod:
+	hypercorn app:app
