@@ -1,0 +1,7 @@
+---
+- src: geerlingguy.pip
+- src: geerlingguy.docker
+# - src: https://www.github.com/bossjones/boss-ansible-role-swapfile
+# - src: https://www.github.com/bossjones/boss-ansible-role-debug
+# - src: https://www.github.com/mrlesmithjr/ansible-motd
+# - src: https://www.github.com/mrlesmithjr/ansible-logrotate
