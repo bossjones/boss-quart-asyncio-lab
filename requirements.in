@@ -17,3 +17,16 @@ aiohttp-session
 aiohttp-remotes
 aiorwlock
 aiohttp-devtools
+aiodns
+cchardet
+
+
+# Yaml 1.2 spec
+ruamel.yaml
+
+
+# There also is a commandline utility yaml available after installing:
+ruamel.yaml.cmd
+colorlog
+Click
+click-plugins

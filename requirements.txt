@@ -5,6 +5,7 @@
 #    pip-compile --output-file requirements.txt requirements.in
 #
 aioconsole==0.1.10        # via aiomonitor
+aiodns==1.1.1
 aiodocker==0.14.0
 aiofiles==0.4.0           # via quart
 aiohttp-debugtoolbar==0.5.0  # via aiohttp-devtools
@@ -27,9 +28,13 @@ attrs==18.2.0             # via aiohttp, black
 autopep8==1.4
 black==18.6b4
 blinker==1.4              # via quart
+cchardet==2.1.1
 cffi==1.11.5              # via cryptography
 chardet==3.0.4            # via aiohttp
-click==6.7                # via aiohttp-devtools, black, quart
+click-plugins==1.0.3
+click==6.7
+colorlog==3.1.4
+configobj==5.0.6          # via ruamel.yaml.cmd
 cryptography==2.3.1       # via pymysql
 docopt==0.6.2             # via ptpython
 fancycompleter==0.8       # via pdbpp
@@ -52,14 +57,20 @@ parso==0.3.1              # via jedi
 pdbpp==0.9.2
 prompt-toolkit==1.0.15    # via ptpython
 ptpython==0.41
+pycares==2.3.0            # via aiodns
 pycodestyle==2.4.0        # via autopep8
 pycparser==2.18           # via cffi
 pygments==2.2.0           # via pdbpp, ptpython
 pylint==2.1.1
 pymysql==0.9.2            # via aiomysql
+python-dateutil==2.7.3    # via ruamel.yaml.convert
 pytoml==0.1.18            # via hypercorn
 quart==0.6.6
-six==1.11.0               # via astroid, cryptography, prompt-toolkit
+ruamel.std.argparse==0.8.1  # via ruamel.yaml.cmd
+ruamel.yaml.cmd==0.4.2
+ruamel.yaml.convert==0.3.0  # via ruamel.yaml.cmd
+ruamel.yaml==0.15.66
+six==1.11.0               # via astroid, configobj, cryptography, prompt-toolkit, python-dateutil
 sortedcontainers==2.0.5   # via quart
 terminaltables==3.1.0     # via aiomonitor
 toml==0.9.4               # via black
