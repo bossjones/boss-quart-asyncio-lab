@@ -9,6 +9,7 @@ PROJECT_ROOT = pathlib.Path(__file__).parent
 
 def setup_routes(app):
     app.router.add_get('/', index)
+    app.router.add_get('/status', index)
     app.router.add_post('/new_user', new_user)
     # app.router.add_get('/poll/{question_id}', poll, name='poll')
     # app.router.add_get('/poll/{question_id}/results',

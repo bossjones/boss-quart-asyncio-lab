@@ -53,12 +53,12 @@ requirements = read_requirements("requirements.txt")
 
 setup(name='aiohttp_statuscheck',
       version=read_version(),
-      description='baseweb project example from aiohttp',
+      description='statuscheck project example from aiohttp',
       platforms=['POSIX'],
       packages=find_packages(),
-      package_data={
-          '': ['templates/*.html', 'static/*.*']
-      },
+    #   package_data={
+    #       '': ['templates/*.html', 'static/*.*']
+    #   },
       include_package_data=True,
       install_requires=requirements,
       zip_safe=False)

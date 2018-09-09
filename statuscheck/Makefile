@@ -94,3 +94,6 @@ docker_run:
 
 run-app:
 	python -m aiohttp_statuscheck
+
+install:
+	python setup.py install
